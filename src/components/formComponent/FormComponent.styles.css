@@ -1,0 +1,114 @@
+/* Center everything in the middle of the page */
+
+.light {
+  background-color: #f0f2f5;
+  color: #000;
+  border-radius: 10px;
+}
+
+.dark {
+  background-color: #333;
+  color: #fff;
+  border-radius: 10px;
+}
+
+/* Container for the form */
+.container {
+  background: white; /* White background */
+  border-radius: 10px;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  padding: 20px;
+  max-width: 400px; /* Maximum width of the form */
+  width: 100%;
+  text-align: center; /* Center text */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark .container {
+  background: #444;
+  color: #fff;
+}
+
+/* Spacing between form elements */
+.container p,
+.container input,
+.container button {
+  margin-bottom: 15px;
+}
+
+/* Style for the input fields */
+.container input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding doesn't add to the element's width */
+}
+
+.dark .container input {
+  border: 1px solid #666;
+  background: #555;
+  color: #fff;
+}
+
+/* Style for the buttons */
+.container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.themeToggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-;
+}
+
+.light > .themeToggle {
+  background-color: #007bff;
+}
+
+.dark > .themeToggle {
+  background-color: #0056b3;
+}
+
+.dark .container button {
+  background-color: #0056b3;
+}
+
+.light > .themeToggle:hover,
+.container button:hover {
+  background-color: #0056b3;
+}
+
+.dark > .themeToggle:hover,
+.dark .container button:hover {
+  background-color: #003a75;
+}
+
+/* Disabled button style */
+.container button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.dark .container button:disabled {
+  background-color: #666;
+}
+
+/* Error message style */
+.container p.error {
+  color: red;
+  margin-top: -10px; /* Reduce space above the error message */
+  margin-bottom: 10px;
+}

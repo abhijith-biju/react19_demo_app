@@ -26,9 +26,5 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     document.body.className = theme;
   }, [theme]);
 
-  return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  );
+  return <ThemeContext value={{ theme, toggleTheme }}>{children}</ThemeContext>;
 };

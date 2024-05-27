@@ -1,5 +1,5 @@
-import FormComponent from "./components/formComponent/FormComponent";
-import { ThemeProvider } from "./context/ThemeContext";
+import FormComponent from './components/formComponent/FormComponent';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   return (

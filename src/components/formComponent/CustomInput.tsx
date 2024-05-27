@@ -1,4 +1,4 @@
-import { forwardRef, InputHTMLAttributes, RefObject } from 'react';
+import { InputHTMLAttributes, RefObject } from 'react';
 
 // interface CustomInputProps extends InputHTMLAttributes<HTMLInputElement> {}
 

@@ -4,10 +4,10 @@ import {
   startTransition,
   useActionState,
   useOptimistic,
-} from "react";
-import TestInput from "./TestInput";
-import "./FormComponent.styles.css";
-import { useTheme } from "../../context/uttils/useThemeHook";
+} from 'react';
+import './FormComponent.styles.css';
+import { useTheme } from '../../context/utils/useThemeHook';
+import CustomInput from './CustomInput';
 
 //  use basic startTransition
 // useTrasition hook for the pending state
@@ -19,8 +19,8 @@ import { useTheme } from "../../context/uttils/useThemeHook";
 function FormComponent() {
   const { theme, toggleTheme } = useTheme();
 
-  const [nameData, setNameData] = useState("");
-  const [name, setName] = useState<string>("");
+  const [nameData, setNameData] = useState('');
+  const [name, setName] = useState<string>('');
 
   const inputRef = useRef<HTMLInputElement>(null);
   const [optisticValue, setOptimisticValue] = useOptimistic(nameData);
@@ -31,17 +31,17 @@ function FormComponent() {
   };
 
   const updateName = async (name: string) => {
-    console.log("consoling the name to be updated", name);
+    console.log('consoling the name to be updated', name);
     try {
       await new Promise((resolve) => setTimeout(resolve, 4000));
       const data = { success: false };
       if (!data.success) {
-        throw new Error("Failed to update name.");
+        throw new Error('Failed to update name.');
       }
       return null;
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
-      return "error!!!";
+      return 'error!!!';
     }
   };
   const [error, updateNameAction, isLoading] = useActionState(async () => {
@@ -50,7 +50,7 @@ function FormComponent() {
       return error;
     }
     startTransition(() => {
-      console.log("success in submiting");
+      console.log('success in submiting');
       setNameData(name);
     });
   }, null);
@@ -58,7 +58,7 @@ function FormComponent() {
   return (
     <div className={theme}>
       <button className="themeToggle" onClick={toggleTheme}>
-        {" "}
+        {' '}
         Toggle Theme
       </button>
 
@@ -82,7 +82,7 @@ function FormComponent() {
         </form>
 
         <p>For Ref example</p>
-        <TestInput ref={inputRef} />
+        <CustomInput ref={inputRef} />
         <button onClick={focusInput}>Focus Input</button>
       </div>
     </div>

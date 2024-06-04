@@ -1,7 +1,12 @@
-import { useState, useRef } from "react";
+import {
+  useState,
+  useRef,
+  //  ReactNode.
+} from "react";
 import TestInput from "./TestInput";
 import "./FormComponent.styles.css";
 import { useTheme } from "../../context/uttils/useThemeHook";
+// import { useFormStatus } from "react-dom";
 
 function FormComponent() {
   const { theme, toggleTheme } = useTheme();
@@ -65,6 +70,7 @@ function FormComponent() {
           />
           <button type="submit">Update</button>
           {error && <p className="error">{error}</p>}
+          {/* <Pending>Loading...</Pending> */}
         </form>
         {isLoading && <p>Loading...</p>}
         <p>For Ref example</p>
@@ -74,5 +80,10 @@ function FormComponent() {
     </div>
   );
 }
+
+// function Pending({children}:{children:ReactNode}){
+// const {pending}= useFormStatus()
+//   return pending && children;
+// }
 
 export default FormComponent;

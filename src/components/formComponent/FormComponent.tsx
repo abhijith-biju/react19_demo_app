@@ -5,7 +5,7 @@ import {
 } from "react";
 import TestInput from "./TestInput";
 import "./FormComponent.styles.css";
-import { useTheme } from "../../context/uttils/useThemeHook";
+import { useTheme } from "../../context/utils/useThemeHook";
 // import { useFormStatus } from "react-dom";
 
 function FormComponent() {
@@ -56,7 +56,6 @@ function FormComponent() {
   return (
     <div className={theme}>
       <button className="themeToggle" onClick={toggleTheme}>
-        {" "}
         Toggle Theme
       </button>
 

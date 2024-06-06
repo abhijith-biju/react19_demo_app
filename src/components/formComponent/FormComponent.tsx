@@ -73,6 +73,7 @@ function FormComponent() {
           {/* <Pending>Loading...</Pending> */}
         </form>
         {isLoading && <p>Loading...</p>}
+
         <p>For Ref example</p>
         <TestInput ref={inputRef} />
         <button onClick={focusInput}>Focus Input</button>
